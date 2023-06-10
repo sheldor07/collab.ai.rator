@@ -1,0 +1,61 @@
+"use client";
+import AEIOUComp from "./AEIOUComp";
+import { useState } from "react";
+import colItems from "../utils/AEIOUItems";
+export default function ImplicietExplicit() {
+  const [showDetail, setShowDetail] = useState(0);
+
+  return (
+    <>
+      <div className="flex flex-row justify-between p-16 ml-56">
+        <div className="flex flex-col">
+          {" "}
+          {/* Wrap in a div with flex-col */}
+          <h1 className="text-4xl font-bold text-black">Gather Insights</h1>
+          <p className="my-4 text-blue-500 text-md">THEME: PLACES</p>
+        </div>
+        <div className="ml-auto">
+          {" "}
+          {/* Move the purple box and use ml-auto class */}
+          <p className="p-8 text-right text-black rounded-xl bg-violet-200">
+            From the AEIOU exercise that you have done earlier, identity what
+            are the implicit details - what can you infer from the observation.
+            Find a break in the pattern (an anomaly), what is confusing and
+            puzzling? What is unsaid or under the surface?{" "}
+          </p>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-4 p-16 ml-56">
+        <div className="flex flex-col w-1/3">
+          {colItems.map((item: object, index: number) => (
+            <button
+              key={index}
+              className="flex flex-row my-12 justify-left "
+              onClick={() => {
+                setShowDetail(index);
+              }}>
+              <h1 className="text-5xl">{item.name.substring(0, 1)}</h1>
+              <p className="inline-block text-lg align-middle">
+                {item.name.substring(1)}
+              </p>
+            </button>
+          ))}
+        </div>
+        <div className="flex flex-col w-full min-h-full text-center bg-white border-4 border-blue-500 border-dashed rounded-xl">
+          <h1 className="p-12 text-4xl font-bold text-black">
+            Explicit Details{" "}
+          </h1>
+          <p className="my-4 text-black text-md">
+            {colItems[showDetail].content}
+          </p>
+        </div>
+        <div className="w-full min-h-full text-center bg-white border-4 border-dashed border-slate-500 rounded-xl ">
+          <h1 className="p-12 text-4xl font-bold text-black">
+            Implicit Details{" "}
+          </h1>
+          <textarea className="w-full text-black shadow-xl min-h-1/2 text-md "></textarea>
+        </div>
+      </div>
+    </>
+  );
+}

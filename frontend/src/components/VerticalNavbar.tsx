@@ -33,8 +33,8 @@ const VerticalNavbar = () => {
 
   return (
     <div
-      className={` duration-100   h-screen  bg-gray-800 text-white flex flex-col  ${
-        isOpen ? "w-56" : " "
+      className={` duration-100 grow min-h-screen   bg-gray-800 text-white flex flex-col  ${
+        isOpen ? "w-72" : " "
       }`}>
       <div className="flex flex-row justify-between p-4">
         {!isOpen ? (
@@ -63,37 +63,41 @@ const VerticalNavbar = () => {
           </button>
         )}
       </div>
-      {isOpen ? (
-        <nav className="flex flex-col">
-          <div>
-            {" "}
-            {/* Added flex-row class */}
-            {navItems.map((item, index) => (
-              <Link
-                href={item.link}
-                className="flex flex-row w-full p-4 text-left align-items-center hover:bg-gray-700"
-                key={index}>
-                <div className="w-8 h-8">
-                  <Image src={item.icon} alt={item.name} />
-                </div>
-                <span className="text-sm">{item.name}</span>
-              </Link>
-            ))}
-          </div>
-        </nav>
-      ) : (
-        <nav className="flex flex-col flex-1">
-          {navItems.map((item, index) => (
-            <div key={index} className="flex flex-col">
-              <a href="#" className="w-full p-4 text-center hover:bg-gray-700">
-                <div className="w-8 h-8 mx-auto">
-                  <Image src={item.icon} alt={item.name} />
-                </div>
-              </a>
+      <div className="flex-grow overflow-y-auto">
+        {isOpen ? (
+          <nav className="flex flex-col">
+            <div>
+              {" "}
+              {/* Added flex-row class */}
+              {navItems.map((item, index) => (
+                <Link
+                  href={item.link}
+                  className="flex flex-row w-full p-4 text-left align-items-center hover:bg-gray-700"
+                  key={index}>
+                  <div className="w-8 h-8">
+                    <Image src={item.icon} alt={item.name} />
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
             </div>
-          ))}
-        </nav>
-      )}
+          </nav>
+        ) : (
+          <nav className="flex flex-col flex-1">
+            {navItems.map((item, index) => (
+              <div key={index} className="flex flex-col">
+                <a
+                  href="#"
+                  className="w-full p-4 text-center hover:bg-gray-700">
+                  <div className="w-8 h-8 mx-auto">
+                    <Image src={item.icon} alt={item.name} />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </nav>
+        )}
+      </div>
     </div>
   );
 };
