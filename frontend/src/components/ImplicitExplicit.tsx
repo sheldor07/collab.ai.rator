@@ -1,9 +1,18 @@
 "use client";
 import AEIOUComp from "./AEIOUComp";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import ImplicitDetails from "./ImplicitDetails";
 import colItems from "../utils/AEIOUItems";
 export default function ImplicietExplicit() {
   const [showDetail, setShowDetail] = useState(0);
+  //create a hook such that if showdetail changes, then we turn the background color of the button to blue
+  useEffect(() => {
+    const button = document.getElementById("button" + showDetail);
+    button?.classList.add("text-violet-500");
+    return () => {
+      button?.classList.remove("text-violet-500");
+    };
+  }, [showDetail]);
 
   return (
     <>
@@ -27,9 +36,10 @@ export default function ImplicietExplicit() {
       </div>
       <div className="grid grid-cols-3 gap-4 p-16 ml-56">
         <div className="flex flex-col w-1/3">
-          {colItems.map((item: object, index: number) => (
+          {colItems.map((item: any, index: number) => (
             <button
               key={index}
+              id={"button" + index}
               className="flex flex-row my-12 justify-left "
               onClick={() => {
                 setShowDetail(index);
@@ -49,12 +59,7 @@ export default function ImplicietExplicit() {
             {colItems[showDetail].content}
           </p>
         </div>
-        <div className="w-full min-h-full text-center bg-white border-4 border-dashed border-slate-500 rounded-xl ">
-          <h1 className="p-12 text-4xl font-bold text-black">
-            Implicit Details{" "}
-          </h1>
-          <textarea className="w-full text-black shadow-xl min-h-1/2 text-md "></textarea>
-        </div>
+        <ImplicitDetails />
       </div>
     </>
   );

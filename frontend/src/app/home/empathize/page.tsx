@@ -1,7 +1,8 @@
 import VerticalNavbar from "../../../components/VerticalNavbar";
 import AEIOUComp from "../../../components/AEIOUComp";
-import ImplicietExplicit from "@/components/ImplicitExplicit";
+import ImplicitExplicit from "@/components/ImplicitExplicit";
 import colItems from "../../../../src/utils/AEIOUItems";
+import Blog1 from "../../../components/Blog1";
 export default function Page() {
   return (
     <>
@@ -33,7 +34,8 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <ImplicietExplicit />
+      <ImplicitExplicit />
+      <Blog1 />
     </>
   );
 }
