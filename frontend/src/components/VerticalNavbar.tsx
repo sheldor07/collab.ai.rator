@@ -33,7 +33,7 @@ const VerticalNavbar = () => {
 
   return (
     <div
-      className={`fixed duration-100 ease-in  min-h-screen   bg-gray-800 text-white flex flex-col  ${
+      className={`fixed duration-100 ease-in  min-h-screen rounded-r-lg   bg-gray-800 text-white flex flex-col  ${
         isOpen ? "w-48" : " "
       }`}>
       <div className="flex flex-row justify-between p-4">

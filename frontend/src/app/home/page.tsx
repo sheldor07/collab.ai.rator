@@ -21,8 +21,8 @@ export default function Page() {
         <div className="flex flex-col w-2/5 px-10 text-left">
           <h2 className="text-3xl text-black underline">Roadmap</h2>
           <p className="text-lg text-black whitespace-pre-line">
-            You will go through each design thinking stages that will guide you to
-            write a persuasive Op-Ed
+            You will go through each design thinking stages that will guide you
+            to write a persuasive Op-Ed
           </p>
         </div>
         <Timeline />
