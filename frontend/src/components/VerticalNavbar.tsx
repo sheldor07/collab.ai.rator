@@ -15,7 +15,7 @@ import CloseSvg from "../../public/navbar-svg/close.svg";
 import Image from "next/image";
 import Link from "next/link";
 const VerticalNavbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { name: "Empathise", icon: Svg1, link: "/home/empathize" },
     { name: "Gather Insights", icon: Svg2, link: "/home/empathize" },
@@ -33,34 +33,34 @@ const VerticalNavbar = () => {
 
   return (
     <div
-      className={` duration-100 grow min-h-screen   bg-gray-800 text-white flex flex-col  ${
-        isOpen ? "w-72" : " "
+      className={`fixed duration-100 ease-in  min-h-screen   bg-gray-800 text-white flex flex-col  ${
+        isOpen ? "w-48" : " "
       }`}>
       <div className="flex flex-row justify-between p-4">
         {!isOpen ? (
-          <div className="w-8 h-8 mx-auto ">
-            <Image src={Svg0} alt="Logo" />
-          </div>
-        ) : (
-          <h1 className="text-xl font-bold">Roadmap</h1>
-        )}
-
-        {!isOpen ? (
-          <button
-            className="w-full text-center translate-x-16 bg-white rounded-md "
-            onClick={toggleNavbar}>
-            <div className="w-5 h-5 mx-auto ">
-              <Image src={ToggleSvg} alt="Toggle" />
+          <>
+            <div className="w-8 h-8 ">
+              <Image src={Svg0} alt="Logo" />
             </div>
-          </button>
+            <button
+              className="w-full text-center translate-x-16 bg-white rounded-md "
+              onClick={toggleNavbar}>
+              <div className="w-5 h-5 ">
+                <Image src={ToggleSvg} alt="Toggle" />
+              </div>
+            </button>
+          </>
         ) : (
-          <button
-            className="text-center bg-white rounded-md "
-            onClick={toggleNavbar}>
-            <div className="w-5 h-5 mx-auto">
-              <Image src={CloseSvg} alt="Close" />
-            </div>
-          </button>
+          <>
+            <h1 className="text-xl font-bold">Roadmap</h1>
+            <button
+              className="text-center bg-white rounded-md "
+              onClick={toggleNavbar}>
+              <div className="w-5 h-5 mx-auto">
+                <Image src={CloseSvg} alt="Close" />
+              </div>
+            </button>
+          </>
         )}
       </div>
       <div className="flex-grow overflow-y-auto">

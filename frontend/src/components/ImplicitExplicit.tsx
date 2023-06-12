@@ -16,7 +16,7 @@ export default function ImplicietExplicit() {
 
   return (
     <>
-      <div className="flex flex-row justify-between p-16 ml-56">
+      <div className="grid justify-between grid-cols-2 p-16 ">
         <div className="flex flex-col">
           {" "}
           {/* Wrap in a div with flex-col */}
@@ -26,7 +26,7 @@ export default function ImplicietExplicit() {
         <div className="ml-auto">
           {" "}
           {/* Move the purple box and use ml-auto class */}
-          <p className="p-8 text-right text-black rounded-xl bg-violet-200">
+          <p className="p-8 ml-24 text-right text-black rounded-xl bg-violet-200">
             From the AEIOU exercise that you have done earlier, identity what
             are the implicit details - what can you infer from the observation.
             Find a break in the pattern (an anomaly), what is confusing and
@@ -34,7 +34,7 @@ export default function ImplicietExplicit() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 p-16 ml-56">
+      <div className="grid grid-cols-5 gap-4 p-16">
         <div className="flex flex-col w-1/3">
           {colItems.map((item: any, index: number) => (
             <button
@@ -51,7 +51,7 @@ export default function ImplicietExplicit() {
             </button>
           ))}
         </div>
-        <div className="flex flex-col w-full min-h-full text-center bg-white border-4 border-blue-500 border-dashed rounded-xl">
+        <div className="flex flex-col w-full min-h-full col-span-2 text-center bg-white border-4 border-blue-500 border-dashed rounded-xl">
           <h1 className="p-12 text-4xl font-bold text-black">
             Explicit Details{" "}
           </h1>
@@ -59,7 +59,9 @@ export default function ImplicietExplicit() {
             {colItems[showDetail].content}
           </p>
         </div>
-        <ImplicitDetails />
+        <div className="col-span-2">
+          <ImplicitDetails disabled={true} />
+        </div>
       </div>
     </>
   );

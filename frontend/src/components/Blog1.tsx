@@ -2,7 +2,7 @@ import ImplicitDetails from "./ImplicitDetails";
 export default function Blog1() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 p-16 ml-56">
+      <div className="grid grid-cols-2 gap-4 p-16 ml-24">
         <div className="flex flex-col row-span-2">
           <h1 className="my-4 text-2xl font-bold">Blog1</h1>
           <div className="flex flex-col p-12 border-2 border-black ">
