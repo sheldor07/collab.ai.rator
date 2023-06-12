@@ -1,5 +1,7 @@
 import VerticalNavbar from "@/components/VerticalNavbar";
 import ResearchQuestion from "@/components/ResearchQuestion";
+import AIHelpBot from "@/components/AIHelpBot";
+
 import Image from "next/image";
 import PlusSvg from "./../../../../public/plusSymbol.svg";
 export default function Page() {
@@ -13,6 +15,7 @@ export default function Page() {
   return (
     <div className="flex flex-row min-h-screen bg-white">
       <VerticalNavbar />
+
       <div className="flex flex-col w-full p-16 ml-24 ">
         <div className="text-left">
           <h1 className="text-3xl font-bold">Craft Research Question</h1>
@@ -32,6 +35,7 @@ export default function Page() {
           </button>
         </div>
       </div>
+      <AIHelpBot page="question" />
     </div>
   );
 }

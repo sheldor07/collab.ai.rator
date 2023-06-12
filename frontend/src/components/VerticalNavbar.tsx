@@ -19,7 +19,7 @@ const VerticalNavbar = () => {
   const navItems = [
     { name: "Empathise", icon: Svg1, link: "/home/empathize" },
     { name: "Gather Insights", icon: Svg2, link: "/home/empathize" },
-    { name: "Craft Question", icon: Svg3, link: "/home/empathize" },
+    { name: "Craft Question", icon: Svg3, link: "/home/question" },
     { name: "Introduce Op-Ed", icon: Svg4, link: "/home/empathize" },
     { name: "Find Sources", icon: Svg5, link: "/home/empathize" },
     { name: "Comprehend & Collate", icon: Svg6, link: "/home/empathize" },
@@ -71,7 +71,7 @@ const VerticalNavbar = () => {
               {/* Added flex-row class */}
               {navItems.map((item, index) => (
                 <Link
-                  href={item.link}
+                  href="/home/empathize"
                   className="flex flex-row w-full p-4 text-left align-items-center hover:bg-gray-700"
                   key={index}>
                   <div className="w-8 h-8">
