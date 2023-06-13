@@ -1,8 +1,9 @@
 "use client";
 import VerticalNavbar from "@/components/VerticalNavbar";
-
+import AIHelpBot from "@/components/AIHelpContainer";
 import SourceCollate from "@/components/SourceCollate";
 import { useState } from "react";
+
 const sourceList = [
   {
     sourceId: 1,
@@ -19,7 +20,7 @@ const sourceList = [
 ];
 export default function Page() {
   const [source, setSource] = useState(sourceList[0]);
-
+  
   return (
     <>
       <div className="flex flex-row min-h-screen bg-white">
@@ -32,8 +33,18 @@ export default function Page() {
               that may address your question direction directly or indirectly
             </p>
           </div>
-          <SourceCollate sourceId={source.sourceId} title={source.title} />
+          {sourceList.map((source, index) => {
+            return (
+              <SourceCollate
+                key={source.sourceId}
+                title={source.title}
+                link={source.link}
+                isChosen={source.isChosen}
+              />
+            );
+          })}
         </div>
+        <AIHelpBot />
       </div>
     </>
   );

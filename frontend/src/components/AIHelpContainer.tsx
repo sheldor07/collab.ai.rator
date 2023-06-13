@@ -18,35 +18,35 @@ export default function AIHelpBot(props: any) {
   };
   return (
     <>
-      <div className="fixed z-10 right-10 bottom-48">
+      <div className="fixed z-10 right-32 bottom-24">
         {feedback ? (
           <FeedbackNotepad {...props} toggleChatWindow={toggleFeedback} />
         ) : null}
-        <button
-          onClick={() => {
-            toggleFeedback();
-          }}
-          className="fixed rounded-full shadow-xl right-5 bottom-48 ">
-          <div className="p-2">
-            <Image src={FeedbackNotepadSvg} alt="AI Help Bot" />
-          </div>
-        </button>
       </div>
-      <div className="fixed right-10 bottom-24">
+      <button
+        onClick={() => {
+          toggleFeedback();
+        }}
+        className="fixed rounded-full shadow-xl right-5 bottom-48 ">
+        <div className="p-2">
+          <Image src={FeedbackNotepadSvg} alt="AI Help Bot" />
+        </div>
+      </button>
+
+      <div className="fixed right-32 bottom-24">
         {chatWindow ? (
           <ChatWindow {...props} toggleChatWindow={toggleChatWindow} />
         ) : null}
-
-        <button
-          onClick={() => {
-            toggleChatWindow();
-          }}
-          className="fixed rounded-full shadow-xl right-5 bottom-24 ">
-          <div className="p-2">
-            <Image src={AIHelpBotSvg} alt="AI Help Bot" />
-          </div>
-        </button>
       </div>
+      <button
+        onClick={() => {
+          toggleChatWindow();
+        }}
+        className="fixed rounded-full shadow-xl right-5 bottom-24 ">
+        <div className="p-2">
+          <Image src={AIHelpBotSvg} alt="AI Help Bot" />
+        </div>
+      </button>
     </>
   );
 }
