@@ -36,7 +36,7 @@ export default function FeedbackNotepad(props: any) {
   ];
 
   return (
-    <div className="z-20 shadow-lg  flex rounded-xl flex-col min-w-[300px] min-h-[500px] h-full align-items-center">
+    <div className="z-20 shadow-lg bg-white flex rounded-xl flex-col min-w-[300px] min-h-[500px] h-full align-items-center">
       <div className="flex flex-col justify-between p-2 border-2 border-slate-100">
         <div className="flex flex-row justify-end">
           <button

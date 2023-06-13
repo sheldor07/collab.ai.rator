@@ -24,7 +24,7 @@ const VerticalNavbar = () => {
     { name: "Introduce Op-Ed", icon: Svg4, link: "/home/introduce" },
     { name: "Find Sources", icon: Svg5, link: "/home/sources" },
     { name: "Comprehend & Collate", icon: Svg6, link: "/home/collate" },
-    { name: "Identify & Ideate", icon: Svg7, link: "/home/empathize" },
+    { name: "Identify & Ideate", icon: Svg7, link: "/home/ideate" },
     { name: "Summarise & Reflect", icon: Svg8, link: "/home/empathize" },
     { name: "Conclude & Refine", icon: Svg9, link: "/home/empathize" },
   ];

@@ -43,7 +43,7 @@ export default function ChatWindow(props: any) {
   const selectedExplainQuestions = explainQuestions.default;
   const selectedFeedbackQuestions = feedbackQuestions.default;
   return (
-    <div className="z-30 shadow-lg  flex rounded-xl flex-col min-w-[300px] min-h-[500px] h-full align-items-center">
+    <div className="z-30 shadow-lg bg-white flex rounded-xl flex-col min-w-[300px] min-h-[500px] h-full align-items-center">
       <div className="flex flex-row justify-between px-4 py-1 border-2 border-slate-100">
         <div className="flex flex-row w-full">
           <div className="w-5 h-5 my-auto mr-2">

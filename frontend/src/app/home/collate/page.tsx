@@ -2,22 +2,9 @@
 import VerticalNavbar from "@/components/VerticalNavbar";
 import AIHelpBot from "@/components/AIHelpContainer";
 import SourceCollate from "@/components/SourceCollate";
+import sourceList from "./../../../utils/SourceList";
 import { useState } from "react";
 
-const sourceList = [
-  {
-    sourceId: 1,
-    title: "Science article",
-    link: "https://www.google.com",
-    isChosen: true,
-  },
-  {
-    sourceId: 2,
-    title: "Youtube video",
-    link: "https://www.bing.com",
-    isChosen: true,
-  },
-];
 export default function Page() {
   const [source, setSource] = useState(sourceList[0]);
 
@@ -42,6 +29,8 @@ export default function Page() {
                   title={source.title}
                   link={source.link}
                   isChosen={source.isChosen}
+                  ifParaphrase={true}
+                  content = {source.content}
                 />
               );
             })}

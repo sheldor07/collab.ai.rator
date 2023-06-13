@@ -5,6 +5,7 @@ import colItems from "../../../../src/utils/AEIOUItems";
 import Blog1 from "../../../components/Blog1";
 import ProceedArrowSvg from "./../../../../public/proceed_arrow.svg";
 import Image from "next/image";
+import AIHelpBot from "@/components/AIHelpContainer";
 export default function Page() {
   return (
     <>
@@ -48,6 +49,7 @@ export default function Page() {
             <Image src={ProceedArrowSvg} alt="Proceed Arrow" />
           </div>
         </button>
+        <AIHelpBot />
       </div>
     </>
   );
