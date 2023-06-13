@@ -45,13 +45,16 @@ export default function ChatWindow(props: any) {
   return (
     <div className="z-30 shadow-lg  flex rounded-xl flex-col min-w-[300px] min-h-[500px] h-full align-items-center">
       <div className="flex flex-row justify-between px-4 py-1 border-2 border-slate-100">
-        <div className="flex flex-row w-full h-1/6">
-          <div className="w-5 h-5">
+        <div className="flex flex-row w-full">
+          <div className="w-5 h-5 my-auto mr-2">
             <Image src={AIHelpBotSvg} alt="AI Help Bot" />
           </div>
           <div className="flex flex-col">
             <p className="font-bold text-blue-500">AI Chat</p>
-            <p className="text-[10px] text-green-500">Online</p>
+            <span className="flex flex-row ">
+              <span className="w-2 h-2 my-auto mr-2 bg-green-500 rounded-full"></span>
+              <p className="text-[10px] text-green-500">Online</p>
+            </span>
           </div>
         </div>
         <button

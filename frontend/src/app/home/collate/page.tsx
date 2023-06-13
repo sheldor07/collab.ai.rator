@@ -20,7 +20,7 @@ const sourceList = [
 ];
 export default function Page() {
   const [source, setSource] = useState(sourceList[0]);
-  
+
   return (
     <>
       <div className="flex flex-row min-h-screen bg-white">
@@ -33,16 +33,19 @@ export default function Page() {
               that may address your question direction directly or indirectly
             </p>
           </div>
-          {sourceList.map((source, index) => {
-            return (
-              <SourceCollate
-                key={source.sourceId}
-                title={source.title}
-                link={source.link}
-                isChosen={source.isChosen}
-              />
-            );
-          })}
+          <div className="my-20">
+            {sourceList.map((source, index) => {
+              return (
+                <SourceCollate
+                  key={source.sourceId}
+                  sourceId={source.sourceId}
+                  title={source.title}
+                  link={source.link}
+                  isChosen={source.isChosen}
+                />
+              );
+            })}
+          </div>
         </div>
         <AIHelpBot />
       </div>
