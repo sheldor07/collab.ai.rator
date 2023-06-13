@@ -21,9 +21,9 @@ const VerticalNavbar = () => {
     { name: "Empathise", icon: Svg1, link: "/home/empathize" },
     { name: "Gather Insights", icon: Svg2, link: "/home/empathize" },
     { name: "Craft Question", icon: Svg3, link: "/home/question" },
-    { name: "Introduce Op-Ed", icon: Svg4, link: "/home/empathize" },
-    { name: "Find Sources", icon: Svg5, link: "/home/empathize" },
-    { name: "Comprehend & Collate", icon: Svg6, link: "/home/empathize" },
+    { name: "Introduce Op-Ed", icon: Svg4, link: "/home/introduce" },
+    { name: "Find Sources", icon: Svg5, link: "/home/sources" },
+    { name: "Comprehend & Collate", icon: Svg6, link: "/home/collate" },
     { name: "Identify & Ideate", icon: Svg7, link: "/home/empathize" },
     { name: "Summarise & Reflect", icon: Svg8, link: "/home/empathize" },
     { name: "Conclude & Refine", icon: Svg9, link: "/home/empathize" },
@@ -84,11 +84,14 @@ const VerticalNavbar = () => {
           <nav className="flex flex-col flex-1">
             {navItems.map((item, index) => (
               <div key={index} className="flex flex-col">
-                <a href="#" className="w-full py-4 text-center">
-                  <div className="w-8 h-8 mx-auto">
+                <Link
+                  href={`${item.link}`}
+                  className="flex flex-row w-full p-4 text-left align-items-center"
+                  key={index}>
+                  <div className="w-8 h-8">
                     <Image src={item.icon} alt={item.name} />
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </nav>

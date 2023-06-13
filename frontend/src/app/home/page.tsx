@@ -1,11 +1,11 @@
 import Timeline from "../../components/Timeline";
-import Navbar from "../../components/VerticalNavbar";
+import VerticalNavbar from "../../components/VerticalNavbar";
 
 export default function Page() {
   return (
     <div className="flex h-screen bg-white">
-      <Navbar />
-      <div className="flex flex-col w-full">
+      <VerticalNavbar />
+      <div className="flex flex-col w-full ml-20">
         <div className="py-10 text-center">
           <p className="text-sm font-light text-violet-400">
             THE ULTIMATE CC0001 WRITING TOOL
@@ -25,7 +25,9 @@ export default function Page() {
             to write a persuasive Op-Ed
           </p>
         </div>
-        <Timeline />
+        <div className="w-5/6 mx-auto mt-10">
+          <Timeline />
+        </div>
       </div>
     </div>
   );
