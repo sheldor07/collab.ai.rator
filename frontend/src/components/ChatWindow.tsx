@@ -76,13 +76,13 @@ export default function ChatWindow(props: any) {
               </div>
               {loading ? (
                 <div className="flex flex-row justify-start w-full p-2 my-2 ">
-                  <p className="p-2 text-sm text-white bg-blue-500 rounded-xl">
+                  <p className="p-2 text-sm text-white bg-slate-500 rounded-xl">
                     Loading...
                   </p>
                 </div>
               ) : (
                 <div className="flex flex-row justify-start w-full p-2 my-2 ">
-                  <p className="p-2 text-sm text-white bg-blue-500 rounded-xl">
+                  <p className="p-2 text-sm text-white bg-slate-500 rounded-xl">
                     {response}
                   </p>
                 </div>
