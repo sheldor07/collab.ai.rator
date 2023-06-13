@@ -1,4 +1,4 @@
-import AIHelpBot from "@/components/AIHelpBot";
+import AIHelpBot from "@/components/AIHelpContainer";
 import VerticalNavbar from "@/components/VerticalNavbar";
 export default function Page() {
   return (

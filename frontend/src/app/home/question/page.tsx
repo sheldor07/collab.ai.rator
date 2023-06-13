@@ -1,7 +1,7 @@
 import VerticalNavbar from "@/components/VerticalNavbar";
 import ResearchQuestion from "@/components/ResearchQuestion";
-import AIHelpBot from "@/components/AIHelpBot";
-
+import AIHelpContainer from "@/components/AIHelpContainer";
+import FeedbackNotepad from "@/components/FeedbackNotepad";
 import Image from "next/image";
 import PlusSvg from "./../../../../public/plusSymbol.svg";
 export default function Page() {
@@ -35,7 +35,7 @@ export default function Page() {
           </button>
         </div>
       </div>
-      <AIHelpBot page="question" />
+      <AIHelpContainer page="question" />
     </div>
   );
 }
