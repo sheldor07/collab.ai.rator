@@ -1,4 +1,4 @@
-import AIHelpBot from "@/components/AIHelpContainer";
+import AIHelpContainer from "@/components/AIHelpContainer";
 import VerticalNavbar from "@/components/VerticalNavbar";
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
           </p>
           <textarea className="w-full h-full min-h-[400px] text-black"></textarea>
         </div>
-        <AIHelpBot />
+        <AIHelpContainer page="question" />
       </div>
     </div>
   );
