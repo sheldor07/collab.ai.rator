@@ -33,7 +33,7 @@ export default function Page() {
               that may address your question direction directly or indirectly
             </p>
           </div>
-          <div className="my-20">
+          <div className="my-18">
             {sourceList.map((source, index) => {
               return (
                 <SourceCollate
