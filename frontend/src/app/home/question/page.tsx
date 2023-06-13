@@ -1,7 +1,6 @@
 import VerticalNavbar from "@/components/VerticalNavbar";
 import ResearchQuestion from "@/components/ResearchQuestion";
 import AIHelpContainer from "@/components/AIHelpContainer";
-import FeedbackNotepad from "@/components/FeedbackNotepad";
 import Image from "next/image";
 import PlusSvg from "./../../../../public/plusSymbol.svg";
 export default function Page() {

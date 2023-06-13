@@ -17,6 +17,7 @@ import Link from "next/link";
 const VerticalNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
+    { name: "Home", icon: Svg0, link: "/home" },
     { name: "Empathise", icon: Svg1, link: "/home/empathize" },
     { name: "Gather Insights", icon: Svg2, link: "/home/empathize" },
     { name: "Craft Question", icon: Svg3, link: "/home/question" },
@@ -34,18 +35,15 @@ const VerticalNavbar = () => {
   return (
     <div
       className={`fixed duration-100 ease-in  min-h-screen rounded-r-lg   bg-gray-800 text-white flex flex-col  ${
-        isOpen ? "w-48" : " "
+        isOpen ? "w-48" : "w-14"
       }`}>
       <div className="flex flex-row justify-between p-4">
         {!isOpen ? (
           <>
-            <div className="w-8 h-8 ">
-              <Image src={Svg0} alt="Logo" />
-            </div>
             <button
               className="w-full text-center translate-x-16 bg-white rounded-md "
               onClick={toggleNavbar}>
-              <div className="w-5 h-5 ">
+              <div className="w-5 h-5 mx-auto">
                 <Image src={ToggleSvg} alt="Toggle" />
               </div>
             </button>
@@ -71,8 +69,8 @@ const VerticalNavbar = () => {
               {/* Added flex-row class */}
               {navItems.map((item, index) => (
                 <Link
-                  href="/home/empathize"
-                  className="flex flex-row w-full p-4 text-left align-items-center hover:bg-gray-700"
+                  href={`${item.link}`}
+                  className="flex flex-row w-full p-4 text-left align-items-center"
                   key={index}>
                   <div className="w-8 h-8">
                     <Image src={item.icon} alt={item.name} />
@@ -86,9 +84,7 @@ const VerticalNavbar = () => {
           <nav className="flex flex-col flex-1">
             {navItems.map((item, index) => (
               <div key={index} className="flex flex-col">
-                <a
-                  href="#"
-                  className="w-full p-4 text-center hover:bg-gray-700">
+                <a href="#" className="w-full py-4 text-center">
                   <div className="w-8 h-8 mx-auto">
                     <Image src={item.icon} alt={item.name} />
                   </div>
