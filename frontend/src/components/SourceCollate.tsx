@@ -21,12 +21,12 @@ export default function SourceCollate(props: any) {
               <Image src={ExternalLinkSvg} alt="external link" />
             </div>
           </div>
-          <textarea className="p-2 my-8 text-sm text-gray-500 h-3/4">
+          <textarea className="h-full p-2 my-8 text-sm text-gray-500">
             {props.content}
           </textarea>
         </div>
         {props.ifParaphrase ? (
-          <div className="flex flex-col p-4 border-l-4 border-dashed">
+          <div className="flex flex-col invisible p-4 border-l-4 border-dashed xl:visible">
             <h1 className="text-lg font-bold text-black">Paraphrase</h1>
             <p>Sum up the argument in your own words</p>
             <textarea className="p-2 m-2 text-sm text-gray-500 h-3/4"></textarea>
