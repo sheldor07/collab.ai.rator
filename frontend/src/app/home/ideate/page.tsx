@@ -2,7 +2,6 @@ import VerticalNavbar from "@/components/VerticalNavbar";
 import AIHelpContainer from "@/components/AIHelpContainer";
 import SourceCollate from "@/components/SourceCollate";
 import sourceList from "./../../../utils/SourceList";
-import Summarise from "@/components/Summarise";
 const ideateList = [
   {
     question:
@@ -25,7 +24,7 @@ const ideateList = [
 ];
 export default function Page() {
   return (
-    <div className="flex flex-col">
+    <>
       <div className="flex flex-row min-h-screen bg-white">
         <VerticalNavbar />
         <div className="p-16 ml-24 ">
@@ -73,8 +72,7 @@ export default function Page() {
         </div>
 
         <AIHelpContainer />
-      </div>{" "}
-      <Summarise />
-    </div>
+      </div>
+    </>
   );
 }

@@ -25,8 +25,8 @@ const VerticalNavbar = () => {
     { name: "Find Sources", icon: Svg5, link: "/home/sources" },
     { name: "Comprehend & Collate", icon: Svg6, link: "/home/collate" },
     { name: "Identify & Ideate", icon: Svg7, link: "/home/ideate" },
-    { name: "Summarise & Reflect", icon: Svg8, link: "/home/ideate" },
-    { name: "Conclude & Refine", icon: Svg9, link: "/home/conclude" },
+    { name: "Summarise & Reflect", icon: Svg8, link: "/home/empathize" },
+    { name: "Conclude & Refine", icon: Svg9, link: "/home/empathize" },
   ];
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
